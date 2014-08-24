@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".TimerActivity"
+    android:textAlignment="center"
+    android:id="@+id/timer_view">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/timer_switch"
+        android:checked="false"
+        android:onClick="toggleTimerClick"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textOff="Idle"
+        android:textOn="Running" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bell"
+        android:id="@+id/bell_button"
+        android:checked="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textOn="@string/bell"
+        android:textOff="@string/bell" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:id="@+id/reset_button"
+        android:onClick="resetButtonClick"
+        android:layout_above="@+id/bell_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_timer"
+        android:text="@string/initial_time"
+        android:textSize="@dimen/timer_text_size"
+        android:editable="false"
+        android:layout_above="@+id/round_info"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="false"
+        android:layout_marginBottom="19dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/round_info"
+        android:editable="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:text="@string/cur_round_start_txt" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keepscreen"
+        android:id="@+id/keep_screen"
+        android:checked="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="screenCheckClick" />
+
+</RelativeLayout>

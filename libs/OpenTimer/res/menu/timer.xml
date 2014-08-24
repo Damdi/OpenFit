@@ -1,0 +1,15 @@
+<!--  <menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:de.damdi.hiittimer="http://schemas.android.com/apk/res-auto">
+      
+     <item android:id="@+id/timely"
+         android:title="@string/timely"
+         android:icon="@drawable/timely"
+         de.damdi.hiittimer:showAsAction="ifRoom"
+         ></item>
+         
+    
+         
+    
+    </menu>
+-->
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"></menu>

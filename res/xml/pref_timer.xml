@@ -1,0 +1,55 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:fredthomsen="http://schemas.android.com/apk/res-auto">
+<!--
+    <CheckBoxPreference
+        android:key="example_checkbox"
+        android:title="@string/pref_title_social_recommendations"
+        android:summary="@string/pref_description_social_recommendations"
+        android:defaultValue="true" />http://schemas.android.com/apk/res-auto
+
+
+    <EditTextPreference
+        android:key="example_text"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+-->
+    <PreferenceCategory android:title="Rounds">
+        <ListPreference
+            android:key="num_rounds"
+            android:title="@string/pref_title_total_rounds"
+            android:summary="Total number of rounds in workout"
+            android:inputType="number"
+            android:entries="@array/roundArray"
+            android:entryValues="@array/roundArray"
+            android:defaultValue="20" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Timers">
+        <net.fredthomsen.hiittrainingtimer.TimePreference
+            android:key="work_time"
+            android:title="@string/pref_title_work_time"
+            android:summary="Length of work period in each round"
+            fredthomsen:maxMinute="10"
+            android:defaultValue="00:20" />
+
+        <net.fredthomsen.hiittrainingtimer.TimePreference
+            android:key="rest_time"
+            android:title="@string/pref_title_rest_time"
+            android:summary="Length of rest period in each round"
+            fredthomsen:maxMinute="2"
+            android:defaultValue="00:10" />
+
+        <net.fredthomsen.hiittrainingtimer.TimePreference
+            android:key="delay_time"
+            android:title="@string/pref_title_delay_time"
+            android:summary="Delay before workout starts"
+            fredthomsen:maxMinute="1"
+            android:defaultValue="00:05" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

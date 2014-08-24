@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+         A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked.
+    -->
+   
+    <Preference android:title="Open Source Licenses" android:key="open_source"/>
+
+
+</PreferenceScreen>

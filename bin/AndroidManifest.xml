@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.damdi.fitness"
+    android:versionCode="1"
+    android:versionName="0.1"
+    android:installLocation="auto" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <activity
+            android:name="de.damdi.fitness.activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.create_workout.ExerciseTypeListActivity"
+            android:label="@string/title_exercisetype_list"
+            android:parentActivityName="de.damdi.fitness.activity.MainActivity"
+            android:icon="@drawable/icon_dumbbell" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.skubware.opentraining.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="de.damdi.hiittimer.TimerActivity"
+            android:label="@string/app_name" >
+           <!--   <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>--> 
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.create_workout.ExerciseTypeDetailActivity"
+            android:label="@string/title_exercisetype_detail"
+            android:parentActivityName=".ExerciseTypeListActivity" 
+            android:icon="@drawable/icon_dumbbell" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExerciseTypeListActivity" />
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.start_training.FExListActivity"
+            android:label="@string/title_exercise_list"
+            android:parentActivityName="de.damdi.fitness.activity.MainActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:icon="@drawable/icon_dumbbell" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.skubware.opentraining.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.start_training.FExDetailActivity"
+            android:label="@string/title_exercise_detail"
+            android:parentActivityName=".ExerciseListActivity"
+            android:windowSoftInputMode="stateHidden" 
+            android:icon="@drawable/icon_dumbbell" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExerciseListActivity" />
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.manage_workouts.WorkoutListActivity"
+            android:label="@string/title_workout_list"
+            android:parentActivityName="de.damdi.fitness.activity.MainActivity" 
+            android:icon="@drawable/icon_dumbbell" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.skubware.opentraining.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.manage_workouts.WorkoutDetailActivity"
+            android:label="@string/title_workout_detail"
+            android:parentActivityName="de.damdi.fitness.activity.manage_workouts.WorkoutListActivity" 
+            android:icon="@drawable/icon_dumbbell" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".WorkoutListActivity" />
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:icon="@drawable/icon_dumbbell" >
+        </activity>
+        <activity
+            android:name="de.damdi.fitness.activity.create_exercise.CreateExerciseActivity"
+            android:label="@string/create_exercise_activity_title"
+            android:icon="@drawable/icon_dumbbell" >
+        </activity>
+
+        
+        <service android:enabled="true" android:name="de.damdi.fitness.activity.settings.sync.OpenTrainingSyncService" />
+        
+    </application>
+
+</manifest>

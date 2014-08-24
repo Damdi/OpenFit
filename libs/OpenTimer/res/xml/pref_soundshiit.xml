@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Notification Tones">
+        <RingtonePreference
+            android:key="start_work_tone"
+            android:title="@string/pref_title_start_work_tone"
+            android:summary="Sound Signaling Start of Work Period"
+            android:defaultValue="content://settings/system/notification_sound"
+        />
+
+        <RingtonePreference
+            android:key="end_work_tone"
+            android:title="@string/pref_title_end_work_tone"
+            android:summary="Sound Signaling Start of Work Period"
+            android:defaultValue="content://settings/system/notification_sound"
+        />
+
+        <RingtonePreference
+            android:key="end_train_tone"
+            android:title="@string/pref_title_end_train_tone"
+            android:summary="Sound Signaling End of Workout"
+            android:defaultValue="content://settings/system/notification_sound"
+        />
+    </PreferenceCategory>
+</PreferenceScreen>

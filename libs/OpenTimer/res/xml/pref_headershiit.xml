@@ -1,0 +1,21 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="de.damdi.hiittimer.SettingsActivity$TimerPreferenceFragment"
+        android:title="@string/pref_header_timer" />
+
+    <header
+        android:fragment="de.damdi.hiittimer.SettingsActivity$SoundsPreferenceFragment"
+        android:title="@string/pref_header_sounds" />
+
+    <header
+        android:fragment="de.damdi.hiittimer.SettingsActivity$DisplayPreferenceFragment"
+        android:title="@string/pref_header_display" />
+
+    <header
+        android:fragment="net.fredthomsen.hiittrainingtimer.SettingsActivity$SocialPreferenceFragment"
+        android:title="@string/pref_header_social" />
+
+</preference-headers>

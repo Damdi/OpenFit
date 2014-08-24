@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Display Sleep">
+        <CheckBoxPreference
+            android:key="no_sleep_screen"
+            android:title="Keep Screen On"
+            android:summary="Leave Screen on While Timer is Running"
+            android:defaultValue="false"
+        />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Display Colors">
+        <ListPreference
+            android:key="work_bg_color"
+            android:title="Work Background Color"
+            android:summary="Color of Background During Work Period"
+            android:defaultValue="@android:color/holo_green_light"
+        />
+
+        <ListPreference
+            android:key="rest_bg_color"
+            android:title="Rest Background Color"
+            android:summary="Color of Background During Rest Period"
+            android:defaultValue="@android:color/holo_red_light"
+        />
+    </PreferenceCategory>
+
+</PreferenceScreen>
